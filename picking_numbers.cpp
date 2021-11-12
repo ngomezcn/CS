@@ -40,6 +40,7 @@ int main()
             }
 
             index++;
+            i++;
             aux.size++;
             aux.number = a[index];
             aux.index = 1;
