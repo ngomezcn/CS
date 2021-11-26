@@ -3,13 +3,7 @@
 
 int main(int argc, char const *argv[])
 {
-    /* 
-        L: length of the text
-
-        Constraints:
-           1. Remove spaces
-           2. Characters are into a grid
-    */
+  
 
     float L = 0;
     std::string s;// = "feedthedog";
