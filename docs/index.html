@@ -1,1 +1,102 @@
-<h1>asdasd</h1>
+# Data Structures
+
+# Big-0 Notation
+
+> Gives an upper bound of the complexity in the **worst case**, helping **to quantify performance** as the input size becomes arbitrarily large.
+> 
+
+*Proporciona un límite superior de complejidad en el peor de los casos, lo que ayuda a cuantificar el rendimiento a medida que el tamaño de entrada se vuelve arbitrariamente grande.*
+
+### Common complexities ordered
+
+> $n$ → the size of the input
+> 
+
+| Constant | ⁍ |
+| --- | --- |
+| Logarithmic  | ⁍ |
+| Linear | ⁍ |
+| Linearithmic | ⁍ |
+| Quadric | ⁍ |
+| Cubic | ⁍ |
+| Exponential | ⁍ |
+| Factorial | ⁍ |
+
+### Examples
+
+***Constant Time:*** $0(1)$
+
+```python
+i = 0
+while i < 11:
+	i = i + 1
+```
+
+```python
+a = 1
+b = 2
+c = a + 5 * b
+```
+
+It is constant time because we already know how many iterations we are going to do before executing the code
+
+Even though we do 3 operations, it is still  $0 (1)$ because we know the number of times it will be executed
+
+---
+
+**Linear Time:** $0(n)$
+
+```python
+i = 0
+while i < n:
+	i = i + 1
+```
+
+Linear time cause the code is going to execute $n$ times
+
+---
+
+**Quadratic Time:** $0(n^2)$
+
+```python
+for (i = 0; i < n; i++):
+	for (j = 0; j < n; j++):
+```
+
+```python
+for (i = 0; i < n; i++):
+	for (j = **i**; j < n; j++):
+```
+
+Quadratic because is using nested loop so n is going to execute $n$$*n$ times
+
+This becomes $n-1, n-2,n-3,...$  is $0(n^2)$ cause in the worst case is still $n*n$. 
+
+---
+
+**Advanced Example:** $0(log(n))$
+
+Suppose we have a sorted array and we want to find the index of a particular value in the array, if it exists. What is the time complexity of the following algorithm?
+
+- Array is sorted
+- Find the index of a particular value
+- Value can not exists
+
+```python
+low = 0
+high = n-1
+while low <= high:
+
+	mid = (low + high) / 2
+
+  if array[mid} == value: 
+	  return mid
+  else if array[mid} < value: 
+    lo = mid + 1
+  else if array[mid} > value: 
+    hi = mid - 1
+
+return -1 # Value not found
+```
+
+---
