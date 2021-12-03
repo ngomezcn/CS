@@ -1,9 +1,5 @@
 #include <iostream>
-
-#include <iostream>     // std::cout
 #include <algorithm>    // std::copy
-#include <vector>       // std::vector
-
 
 /*
     This is for learning purposes only, it is not optimized/prepared for actual use.
