@@ -3,56 +3,74 @@
 using namespace std;
 class Array
 {
-    private:
-        int len = 0;
-        int capacity = 0;
+private:
+    int len = 0;
+    int capacity = 0;
 
-    public:
-        int *arr = nullptr;
+public:
+    int* arr = nullptr;
 
-        int size()
+    int size()
+    {
+        return len;
+    }
+    bool isEmpty()
+    {
+        return size() == 0;
+    }
+    int get()
+    {
+
+    }
+    void clear()
+    {
+        arr = nullptr;
+        len = 0;
+        capacity = 0;
+    }
+    void add(int v)
+    {
+        if (capacity <= 0)
         {
-            return len;
+            capacity++;
+
+            int* new_arr = new int[capacity];
+            new_arr[capacity-1] = v;
+
+            arr = new int[capacity];
+            arr = new_arr;
+
+            len++;
         }
-        bool isEmpty()
+        else
         {
-            return size() == 0;
+            capacity++;
+            int* new_arr = new int[capacity];
+
+            new_arr = arr;
+            new_arr[capacity - 1] = v;
+
+            arr = new int[capacity];
+            arr = new_arr;
+
+            len++;
         }
-        void clear()
-        {
-            for (size_t i = 0; i < capacity; i++)
-            {
-                arr[i] = 0;
-            }
-            len = 0;
-        }
-        void add(int v)
-        {
-            if(capacity <= 0)
-            {
-
-                capacity++;
-                int *new_arr = new int[capacity];
-
-                new_arr = arr;
-                new_arr[capacity] = v;
-
-                arr = new int[capacity];
-                arr = new_arr;            
-            }
-            
-        }
-
+    }
 };
 
 int main()
 {
     Array arr;
     arr.add(10);
-    cout << arr.size() << endl;
+    arr.add(11);
+    arr.clear();
+    arr.add(13);
+    arr.add(111);
+
+    cout << "size: " << arr.size() << endl;
     for (size_t i = 0; i < arr.size(); i++)
     {
         cout << "1. " << arr.arr[i] << endl;
     }
-    
+
 }
