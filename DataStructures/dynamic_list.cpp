@@ -96,14 +96,24 @@ public:
     {
         for (size_t i = 0; i < len; i++)
         {
-
             if (arr[i] == element)
             {
                 return i;
             }
         }
-
         return -1;
+    }
+
+    bool contains(int element)
+    {
+        for (size_t i = 0; i < len; i++)
+        {
+            if (arr[i] == element)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 };
 
@@ -121,6 +131,7 @@ int main()
 
     cout << "size: " << arr.size() << endl;
     cout << "indexOf: " << arr.indexOf(10) << endl;
+    cout << "contains: " << arr.contains(10) << endl;
 
     for (size_t i = 0; i < arr.size(); i++)
     {
