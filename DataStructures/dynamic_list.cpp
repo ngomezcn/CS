@@ -41,29 +41,6 @@ public:
         len = 0;
         capacity = 0;
     }
-
-    void removeAt(int index)
-    {
-        int begin = index;
-        int end = len-index-1;
-
-        int* begin_arr = new int[begin];
-        int* end_arr = new int[end];
-
-        begin_arr = arr;
-        end_arr = arr+index+1;
-
-        arr = new int[capacity - 1];
-        
-        // TODO: Find a way to avoid use std::copy. Just for learning purposes :)
-
-        std::copy(begin_arr, begin_arr + begin, arr);
-        std::copy(end_arr, end_arr + end, arr + begin);
-
-        capacity--;
-        len--;
-    }
-
     void add(int v)
     {
         if (capacity <= 0)
@@ -92,6 +69,42 @@ public:
             len++;
         }
     }
+
+    void removeAt(int index)
+    {
+        int begin = index;
+        int end = len-index-1;
+
+        int* begin_arr = new int[begin];
+        int* end_arr = new int[end];
+
+        begin_arr = arr;
+        end_arr = arr+index+1;
+
+        arr = new int[capacity - 1];
+        
+        // TODO: Find a way to avoid use std::copy. Just for learning purposes :)
+
+        std::copy(begin_arr, begin_arr + begin, arr);
+        std::copy(end_arr, end_arr + end, arr + begin);
+
+        capacity--;
+        len--;
+    }
+
+    int indexOf(int element)
+    {
+        for (size_t i = 0; i < len; i++)
+        {
+
+            if (arr[i] == element)
+            {
+                return i;
+            }
+        }
+
+        return -1;
+    }
 };
 
 int main()
@@ -103,10 +116,12 @@ int main()
     arr.add(15);
     arr.add(16);
     arr.add(17);
-
     arr.removeAt(0);
+    arr.add(17);
 
     cout << "size: " << arr.size() << endl;
+    cout << "indexOf: " << arr.indexOf(10) << endl;
+
     for (size_t i = 0; i < arr.size(); i++)
     {
         cout << i <<". " << arr.get(i) << endl;
