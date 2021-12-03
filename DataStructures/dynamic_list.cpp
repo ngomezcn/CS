@@ -1,5 +1,10 @@
 #include <iostream>
 
+#include <iostream>     // std::cout
+#include <algorithm>    // std::copy
+#include <vector>       // std::vector
+
+
 /*
     This is for learning purposes only, it is not optimized/prepared for actual use.
 */
@@ -39,7 +44,23 @@ public:
 
     void removeAt(int index)
     {
+        int begin = index;
+        int end = len-index-1;
 
+        int* begin_arr = new int[begin];
+        int* end_arr = new int[end];
+
+        begin_arr = arr;
+        end_arr = arr+index+1;
+
+        arr = new int[capacity - 1];
+        
+        // TODO: Find a way to avoid use std::copy. Just for learning purposes :)
+
+        std::copy(begin_arr, begin_arr + begin, arr);
+        std::copy(end_arr, end_arr + end, arr + begin);
+
+        capacity--;
         len--;
     }
 
@@ -50,7 +71,7 @@ public:
             capacity++;
 
             int* new_arr = new int[capacity];
-            new_arr[capacity-1] = v;
+            new_arr[capacity - 1] = v;
 
             arr = new int[capacity];
             arr = new_arr;
@@ -75,22 +96,19 @@ public:
 
 int main()
 {
-    /*Array arr;
+    Array arr;
     arr.add(10);
     arr.add(11);
-    arr.clear();
     arr.add(13);
-    arr.add(111);
-    arr.set(0,777);
+    arr.add(15);
+    arr.add(16);
+    arr.add(17);
+
+    arr.removeAt(0);
 
     cout << "size: " << arr.size() << endl;
     for (size_t i = 0; i < arr.size(); i++)
     {
-        cout << "1. " << arr.get(i) << endl;
-    }*/
-
-    int* arr = new int[] {1, 2, 3, 4, 5};
-    int* new_arr = new int[2];
-
-
+        cout << i <<". " << arr.get(i) << endl;
+    }
 }
