@@ -1,3 +1,3 @@
 # CS
 
-[Repo Pages](https://ngomezcn.github.io/CS/)
+[Read more](https://ngomezcn.github.io/CS/)
