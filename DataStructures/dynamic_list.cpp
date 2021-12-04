@@ -113,24 +113,3 @@ public:
     }
 };
 
-int main()
-{
-    Array arr;
-    arr.add(10);
-    arr.add(11);
-    arr.add(13);
-    arr.add(15);
-    arr.add(16);
-    arr.add(17);
-    arr.removeAt(0);
-    arr.add(17);
-
-    cout << "size: " << arr.size() << endl;
-    cout << "indexOf: " << arr.indexOf(10) << endl;
-    cout << "contains: " << arr.contains(10) << endl;
-
-    for (size_t i = 0; i < arr.size(); i++)
-    {
-        cout << i <<". " << arr.get(i) << endl;
-    }
-}
