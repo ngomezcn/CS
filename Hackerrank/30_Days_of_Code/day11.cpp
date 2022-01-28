@@ -31,9 +31,6 @@ int main()
             + matrix[i+1][j] 
             + matrix[i+1][j+1];
 
-            
-
-
             if(sumatori > max_sum)
             {
                 max_sum = sumatori;
