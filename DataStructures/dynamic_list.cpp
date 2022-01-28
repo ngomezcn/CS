@@ -119,6 +119,7 @@ int main()
     arr.add(10);
     arr.add(11);
     arr.add(13);
+    arr.add(10);
     arr.add(15);
     arr.add(16);
     arr.add(17);
