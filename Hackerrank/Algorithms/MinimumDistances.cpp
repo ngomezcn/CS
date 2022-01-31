@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+    int counter = 0;
     int n = 6;
     cin >> n;
     vector<int> a = {7, 1, 3, 4, 1, 7};
@@ -25,6 +26,7 @@ int main()
                     minDistance = i - j;
                 }
             }
+            counter++;
         }
         remember.push_back(value);
     }
@@ -38,5 +40,6 @@ int main()
         cout << minDistance << endl;
     }
 
+    cout << "counter" << counter << endl;
     return 0;
 }
