@@ -49,21 +49,28 @@ class Student :  public Person{
         // Write your function here
         char calculate()
         {
-            cout << firstName << endl;
-            cout << lastName << endl;
-            cout << id << endl;
+            int sumatori = 0;
 
-            for (size_t i = 0; i < 2; i++)
+            for (size_t i = 0; i < testScores.size(); i++)
             {
-                cout << testScores[i] << endl;
+                sumatori += testScores[i];
             }
-            
+            int grade = sumatori/testScores.size();
+
+
+            switch (grade) {
+                case 90 ... 100 : return 'O';
+                case 80 ... 89 : return 'E';
+                case 70 ... 79 : return 'A';
+                case 55 ... 69 : return 'P';
+                case 40 ... 54 : return 'D';
+                default: return 'T';
+            }
+
         }
 };
 
-int
-
-int maain() {
+int main() {
 	string firstName;
   	string lastName;
 	int id;
