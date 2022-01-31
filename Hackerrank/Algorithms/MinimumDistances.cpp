@@ -9,7 +9,7 @@ int main()
     cin >> n;
     vector<int> a = {7, 1, 3, 4, 1, 7};
     vector<int> remember;
-    long long int minDistance = INT64_MAX;
+    int minDistance = n + 1;
     int last = 0;
 
     for (int i = 0; i < n; i++)
@@ -20,8 +20,6 @@ int main()
         {
             if (value == remember[j])
             {
-                // cout << "xd" << a[i] << " " << i-j << endl;
-
                 if (i - j < minDistance)
                 {
                     minDistance = i - j;
@@ -31,7 +29,7 @@ int main()
         remember.push_back(value);
     }
 
-    if (minDistance == INT64_MAX)
+    if (minDistance == n + 1)
     {
         cout << -1 << endl;
     }
