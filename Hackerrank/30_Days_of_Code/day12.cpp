@@ -58,14 +58,14 @@ class Student :  public Person{
             int grade = sumatori/testScores.size();
 
 
-            switch (grade) {
+            /*switch (grade) {
                 case 90 ... 100 : return 'O';
                 case 80 ... 89 : return 'E';
                 case 70 ... 79 : return 'A';
                 case 55 ... 69 : return 'P';
                 case 40 ... 54 : return 'D';
                 default: return 'T';
-            }
+            }*/
 
         }
 };
