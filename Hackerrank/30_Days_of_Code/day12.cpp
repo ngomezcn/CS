@@ -57,7 +57,6 @@ class Student :  public Person{
             }
             int grade = sumatori/testScores.size();
 
-
             /*switch (grade) {
                 case 90 ... 100 : return 'O';
                 case 80 ... 89 : return 'E';
