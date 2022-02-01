@@ -15,29 +15,23 @@ int main()
         cin >> value;
         width.push_back(value);
     }
-    int cases[1000][2];
-    for (size_t i = 0; i < t; i++)
-    {
-        for (size_t j = 0; j < 2; j++)
-        {
-            cin >> cases[i][j];
-        }
-    }
-
+    
     int minus = 100000;
+    
     for (size_t i = 0; i < t; i++)
     {
-        for (size_t j = cases[i][0]; j <= cases[i][1]; j++)
+        int n1,n2;
+        cin >> n1;
+        cin >> n2;
+        for (size_t j = n1; j <=n2; j++)
         {
             if(width[j] < minus)
             {
                 minus = width[j];
             }
-
         }
         cout << minus << endl;
-
         minus = 100000;
     }
-    
+
 }
