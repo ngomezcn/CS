@@ -13,10 +13,16 @@ int chocolateFeast()
     wrapers = barWithMoney;
     result = barWithMoney;
 
+    //cout << "result: " << result << endl;
+   // cout << "wrapers: " << << endl;
+
     while (wrapers >= neededWrapers)
     {
+        //cout << "wrapers: " << wrapers<< endl;
+
         result++;
-        wrapers--;
+        wrapers++;
+        wrapers -= neededWrapers;
     }
     cout << result << endl;
 
