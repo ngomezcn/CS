@@ -23,7 +23,7 @@ int chocolateFeast()
     }
     cout << result << endl;
 
-    return 0;asdsad
+    return 0;
 }
 
 int main()
