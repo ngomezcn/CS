@@ -3,7 +3,6 @@
 using namespace std;
 int main(int argc, char const *argv[])
 {
-
     string s;
     char abc[26] = {0};
     while (cin >> s)
