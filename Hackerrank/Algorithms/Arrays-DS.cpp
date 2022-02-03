@@ -7,9 +7,7 @@ int main(int argc, char const *argv[])
 {
 
     int N = 0;
-
     std::cin >> N;
-
     std::vector<int> A;
 
     for (size_t i = 0; i < N; i++)

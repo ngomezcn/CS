@@ -3,6 +3,9 @@
 using namespace std;
 int main(int argc, char const *argv[])
 {
+
+    int * n = new int(11);
+    int * n = new int[11];
     string s;
     char abc[26] = {0};
     while (cin >> s)
