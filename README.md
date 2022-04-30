@@ -1,1 +1,1 @@
-[More](https://ngomezcn.github.io/Computer-Science/)
+[More](https://ngomezcn.github.io/CS/)
