@@ -1,0 +1,3 @@
+Nanual: https://ia801005.us.archive.org/1/items/nso-pegasus/NSO-Pegasus.pdf
+jeff phone audit: https://s3.documentcloud.org/documents/6668313/FTI-Report-into-Jeff-Bezos-Phone-Hack.pdf
+Check if smarthpone is compromised: https://github.com/mvt-project/mvt
