@@ -1,8 +1,9 @@
 *.exe
 *.out
 .vscode
-
+.cph
 */venv
+tempCodeRunnerFile.cpp
 
 # Prerequisites
 *.d
